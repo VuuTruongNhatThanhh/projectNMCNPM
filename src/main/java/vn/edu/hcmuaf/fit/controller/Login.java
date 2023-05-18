@@ -1,7 +1,5 @@
 package vn.edu.hcmuaf.fit.controller;
 
-import vn.edu.hcmuaf.fit.bean.Log;
-import vn.edu.hcmuaf.fit.database.DB;
 import vn.edu.hcmuaf.fit.model.User;
 import vn.edu.hcmuaf.fit.services.SHA1;
 
@@ -12,11 +10,11 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 
 @WebServlet(name = "Login", value = "/Login")
-public class LoginController extends HttpServlet {
-
+public class Login extends HttpServlet {
+    String url;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        url = request.getParameter("url");
         request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 
@@ -35,9 +33,19 @@ public class LoginController extends HttpServlet {
         else {
             HttpSession session = request.getSession(true);
             session.setAttribute("auth", user);
+//            response.sendRedirect("LoadControl");
+            session.setMaxInactiveInterval(1800);
+            if (url != null) {
+                url = url.replaceAll("-", "&");
+                response.sendRedirect(url);
+            } else {
+                if (user.getRoleId() < 2) {
+                    response.sendRedirect("/StatisticalAdmin");
+                } else {
 //            10. Trả về trang index và hiện tên người dùng ở header.jsp trong trang chủ(index)
-            response.sendRedirect("LoadControl");
-
+                    response.sendRedirect("/LoadControl");
+                }
+            }
         }
     }
 }
