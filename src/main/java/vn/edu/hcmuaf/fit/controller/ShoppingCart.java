@@ -6,6 +6,7 @@ import vn.edu.hcmuaf.fit.database.DB;
 import vn.edu.hcmuaf.fit.model.Cart;
 import vn.edu.hcmuaf.fit.model.CartDetails;
 import vn.edu.hcmuaf.fit.model.Preferential;
+import vn.edu.hcmuaf.fit.model.User;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

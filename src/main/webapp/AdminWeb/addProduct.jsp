@@ -15,6 +15,8 @@
     <div class="home-content">
         <div class="manager-product">
             <div class="title">${title}</div>
+            <%--Thêm sản phẩm  4. Người dùng tiến hành nhập thông tin sản phẩm --%>
+            <%--Sửa sản phẩm 7. Người dùng tiến hành nhập thông tin sản phẩm --%>
             <form class="row" action="${action}" method="post">
                 <div class="form-group col-md-3">
                     <label class="control-label">Mã sản phẩm </label>
@@ -46,6 +48,8 @@
                     <label class="control-label">Mô tả sản phẩm</label>
                     <textarea class="form-control" name="dicription_product" id="mota">${p == null?"":p.describe}</textarea>
                 </div>
+                <%--Thêm sản phẩm:  5. Gửi thông tin của người dùng --%>
+                <%--Sửa sản phẩm:  8. Gửi thông tin của người dùng --%>
                 <button class="btn btn-save" type="submit"> Lưu lại</button>
                 <a class="btn btn-cancel" href="/ProductAdmin">Hủy bỏ</a>
             </form>

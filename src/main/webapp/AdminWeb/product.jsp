@@ -20,6 +20,12 @@
                 <div class="col-md-12">
                     <div class="row element-button">
                         <div class="col-sm-2">
+                            <%-- Thông báo kết quả --%>
+                           <p>${message}</p>
+                        </div>
+                        <div class="col-sm-2">
+                            <%--Thêm sản phẩm: 1. Người dùng thực hiện yêu cầu chức năng thêm sản phẩm --%>
+                            <%--Thêm sản phẩm: 2. Yêu cầu hiển thị chức năng thêm sản phẩm --%>
                             <a class="btn btn-add btn-sm" href="/AddProductAmin" title="Thêm">
                                 <i class="fas fa-plus"></i>
                                 Thêm sản phẩm</a>
@@ -68,10 +74,12 @@
                                 </c:if>
                                 <td>${p.getNameType()}</td>
                                 <td>
+                                        <%-- Xóa sản phẩm: 1. Người dùng thực hiện yêu cầu chức năng xóa sản phẩm --%>
                                     <button onclick="removeP('${p.id}')" class="btn btn-primary btn-sm trash"
                                             type="button" title="Xóa">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
+                                        <%--Sửa sản phẩm:  1. Người dùng thực hiện yêu cầu chức năng sửa sản phẩm --%>
                                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa"
                                             data-toggle="modal" data-target="#ModalUP"><a style="color: white;"
                                                                                           href="UpdateProductAdmin?id=${p.id}&idType=${p.idType}">

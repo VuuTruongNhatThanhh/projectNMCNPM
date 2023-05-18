@@ -39,6 +39,7 @@
                         <c:if test="${auth==null}">
                             <div class="sign">
                                 <ul>
+                                        <%--1. Người dung nhấn đăng nhập ở header--%>
                                     <li><a href="login.jsp">Đăng nhập</a></li>
                                     <li><a href="#">/</a></li>
                                     <li><a href="signup.jsp">Đăng ký</a></li>
@@ -48,7 +49,7 @@
                         <c:if test="${auth !=null}">
                             <div class="head-avt">
                                 <ul>
-
+                                        <%--10. Hiển thị tên người dùng nếu thành công--%>
                                     <li><a href="/UserProfile">Xin chào ${auth.name}</a></li>
 
 
