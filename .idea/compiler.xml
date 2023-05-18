@@ -11,6 +11,7 @@
         <module name="Vegetables" />
         <module name="ProjectTTLTW" />
         <module name="ProjectNhom3" />
+        <module name="projectNMCNPM" />
       </profile>
     </annotationProcessing>
   </component>
