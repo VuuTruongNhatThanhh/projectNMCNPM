@@ -259,3 +259,75 @@
         width: 500px;
     }
 }
+/* Điều chỉnh CSS cho màn hình di động */
+@media (max-width: 767px) {
+    #abc .container {
+        justify-content: center;
+        align-items: center;
+        position: unset;
+        width: 375px;
+        background-color: #ecf0f3;
+    }
+    .main {
+        min-width: 375px;
+    }
+    .switch {
+        display: none;
+    }
+    #abc {
+        display: block;
+    }
+    .main {
+        width: 375px;
+    }
+    /* Căn giữa phần tử chính */
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    /* Chỉnh kích thước font chữ */
+    .form_title {
+        font-size: 24px;
+    }
+
+    /* Thay đổi kích thước input và nút đăng nhập */
+    .form__input,
+    .form__button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Căn giữa phần tử chuyển đổi và chỉnh kích thước font chữ */
+    .switch__title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .switch__description {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* Ẩn phần tử không cần thiết */
+    .switch__circle--t {
+        display: none;
+    }
+}
+
+/* Điều chỉnh CSS cho tablet và màn hình lớn hơn */
+@media (min-width: 768px) {
+    /* Tăng kích thước font chữ */
+    .form_title {
+        font-size: 32px;
+    }
+
+    /* Thay đổi kích thước input và nút đăng nhập */
+    .form__input,
+    .form__button {
+        width: 400px;
+    }
+}
+
