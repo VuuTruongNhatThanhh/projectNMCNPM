@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.controller;
 
 import vn.edu.hcmuaf.fit.Dao.BillDao;
 import vn.edu.hcmuaf.fit.model.Bills;
+import vn.edu.hcmuaf.fit.model.User;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

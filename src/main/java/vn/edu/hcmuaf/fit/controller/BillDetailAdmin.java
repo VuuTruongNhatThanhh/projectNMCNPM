@@ -3,6 +3,7 @@ package vn.edu.hcmuaf.fit.controller;
 import vn.edu.hcmuaf.fit.Dao.BillDao;
 import vn.edu.hcmuaf.fit.Dao.BillDetailDao;
 import vn.edu.hcmuaf.fit.model.BillDetails;
+import vn.edu.hcmuaf.fit.model.User;
 import vn.edu.hcmuaf.fit.services.PermissionService;
 
 import javax.servlet.*;

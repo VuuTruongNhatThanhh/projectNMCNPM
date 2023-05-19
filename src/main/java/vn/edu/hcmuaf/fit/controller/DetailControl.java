@@ -1,7 +1,9 @@
 package vn.edu.hcmuaf.fit.controller;
 
 import vn.edu.hcmuaf.fit.Dao.*;
+import vn.edu.hcmuaf.fit.model.Product;
 import vn.edu.hcmuaf.fit.model.Review;
+import vn.edu.hcmuaf.fit.model.Weight;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

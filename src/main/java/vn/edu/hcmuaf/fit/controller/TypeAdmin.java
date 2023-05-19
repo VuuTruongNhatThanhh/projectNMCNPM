@@ -1,5 +1,8 @@
 package vn.edu.hcmuaf.fit.controller;
 
+import vn.edu.hcmuaf.fit.Dao.TypeProductDao;
+import vn.edu.hcmuaf.fit.model.TypeProduct;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;

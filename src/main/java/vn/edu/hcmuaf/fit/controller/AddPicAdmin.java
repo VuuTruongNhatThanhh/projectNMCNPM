@@ -4,8 +4,11 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
+import vn.edu.hcmuaf.fit.Dao.PictureDao;
+import vn.edu.hcmuaf.fit.Dao.ProductDao;
 import vn.edu.hcmuaf.fit.bean.Log;
 import vn.edu.hcmuaf.fit.database.DB;
+import vn.edu.hcmuaf.fit.model.User;
 import vn.edu.hcmuaf.fit.services.PermissionService;
 
 import javax.servlet.*;
@@ -68,7 +71,7 @@ public class AddPicAdmin extends HttpServlet {
                 FileItem fileItem = fileItemsIterator.next();
                 File file = new File(request.getServletContext().getRealPath("/") + "images\\" + fileItem.getName());
                 fileItem.write(file);
-                DB.me().insert(new Log(Log.WARNING,uu.getId(),ipAddress,"MANAGE PRODUCT IMAGES","Thêm ảnh sản phẩm.Tên sản phẩm: "+ProductDao.getInstance().selectName(id),0));
+                DB.me().insert(new Log(Log.WARNING,uu.getId(),ipAddress,"MANAGE PRODUCT IMAGES","Thêm ảnh sản phẩm.Tên sản phẩm: "+ ProductDao.getInstance().selectName(id),0));
 
                 PictureDao.getInstance().add("images\\" + fileItem.getName(), id);
 

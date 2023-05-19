@@ -1,5 +1,7 @@
 package vn.edu.hcmuaf.fit.controller;
 
+import vn.edu.hcmuaf.fit.Dao.UserDao;
+import vn.edu.hcmuaf.fit.model.User;
 import vn.edu.hcmuaf.fit.services.PermissionService;
 
 import javax.servlet.*;

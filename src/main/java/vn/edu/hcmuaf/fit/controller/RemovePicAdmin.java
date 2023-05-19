@@ -1,7 +1,10 @@
 package vn.edu.hcmuaf.fit.controller;
 
+import vn.edu.hcmuaf.fit.Dao.PictureDao;
+import vn.edu.hcmuaf.fit.Dao.ProductDao;
 import vn.edu.hcmuaf.fit.bean.Log;
 import vn.edu.hcmuaf.fit.database.DB;
+import vn.edu.hcmuaf.fit.model.User;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

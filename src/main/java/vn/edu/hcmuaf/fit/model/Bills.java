@@ -2,6 +2,7 @@ package vn.edu.hcmuaf.fit.model;
 
 
 import vn.edu.hcmuaf.fit.Dao.BillDao;
+import vn.edu.hcmuaf.fit.Dao.ProductDao;
 import vn.edu.hcmuaf.fit.Dao.ShipmentDetailDao;
 
 import java.sql.Date;

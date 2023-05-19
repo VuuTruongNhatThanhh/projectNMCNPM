@@ -5,6 +5,7 @@ import vn.edu.hcmuaf.fit.bean.Log;
 import vn.edu.hcmuaf.fit.database.DB;
 import vn.edu.hcmuaf.fit.model.Cart;
 import vn.edu.hcmuaf.fit.model.ShipmentDetails;
+import vn.edu.hcmuaf.fit.model.User;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
