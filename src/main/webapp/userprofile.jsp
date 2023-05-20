@@ -28,7 +28,7 @@
         <a href="/OderStatus">
             <button class="button">Tình trạng đơn hàng</button>
         </a>
-        <a href="changepassword.jsp">
+        <a href="changepassuser.jsp">
             <button class="button">Đổi mật khẩu</button>
         </a>
     </div>
