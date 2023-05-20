@@ -33,18 +33,14 @@ public class Login extends HttpServlet {
         else {
             HttpSession session = request.getSession(true);
             session.setAttribute("auth", user);
-//            response.sendRedirect("LoadControl");
-            session.setMaxInactiveInterval(1800);
-            if (url != null) {
-                url = url.replaceAll("-", "&");
-                response.sendRedirect(url);
-            } else {
+//            10. Kiểm tra quyền của tài khoản có phải là admin không
                 if (user.getRoleId() < 2) {
-                    response.sendRedirect("/StatisticalAdmin");
+                    //    11.1 Nếu là không phải là admin trả về trang index và hiện tên người dùng ở header.jsp trong trang chủ(index)
+                      response.sendRedirect("/LoadControl"); 
                 } else {
-//            10. Trả về trang index và hiện tên người dùng ở header.jsp trong trang chủ(index)
-                    response.sendRedirect("/LoadControl");
-                }
+//              11.2 Nếu là admin trả về trang index của admin
+                 response.sendRedirect("/StatisticalAdmin");
+                
             }
         }
     }
